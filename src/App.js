@@ -11,6 +11,7 @@ const APIkey = 'c708fb3385169d5e02dacbe0ed9783ad';
 const App = () => {
 const [data, setData] = useState(null);
 const [location, setLocation] = useState('Bucharest');
+const []
 
 //fetch data
 useEffect(() => {
@@ -68,8 +69,13 @@ const date = new Date()
   return (
   <div className="w-100% h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 lg:px-0">
     {/* Form */}
-    <form>
-      Form
+    <form className="h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8">
+      <div className="h-full relative flex justify-between items-center p-4 text-[16px] font-light pl-6 ">
+        <input className="flex-1 bg-transparent outline-none placeholder:text-white text-white h-full" type="text" placeholder="Search by city or country"/>
+        <button className="bg-[#1ab8ed] hover:bg-[#15abdd] w-20 h-12 rounded-full flex justify-center items-center transition">
+          <IoMdSearch className="text-2xl text-white"/>
+        </button>
+      </div>
     </form>
     {/* card */}
     <div className="w-full max-w-[450px] min-h-[580px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 bg-black/20">
